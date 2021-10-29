@@ -12,6 +12,7 @@ void inicializarDuenios (sDuenio* lista,int max) {
 
 	for (i=0;i<max;i++) {
 		lista[i].estaVacio=VACIO;
+		lista[i].cantEstadias=0;
 	}
 }
 

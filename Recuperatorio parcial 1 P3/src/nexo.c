@@ -314,18 +314,25 @@ void listarEstadias(sEstadiaDiaria* lista,sDuenio* listaDuenio,sPerro* listaPerr
 	printf ("------------------------------------------------------------------------------------------------------------------------------\n\n");
 }
 
-int checkLuciaConEstadia (sEstadiaDiaria* listaEstadias,sDuenio* listaDuenio, int maxEstad) {
+int checkLuciaConEstadia (sEstadiaDiaria* listaEstadias,sDuenio* listaDuenio, int maxEstad, int maxDuen) {
 	int retorno=-1;
 	int cantVerificada=0;
-	int iDuenio;
 	int i;
+	int j;
 
-	for (i=0;i<maxEstad;i++) {
-		if (listaEstadias[i].estaVacio==OCUPADO) {
-			iDuenio=buscarDuenioID(listaDuenio,listaEstadias[i].idDuenio,maxEstad);
-
-			if (((strcmp(listaDuenio[iDuenio].nombre,"Lucia")==0) || strcmp(listaDuenio[iDuenio].nombre,"lucia")==0) && (listaEstadias[i].fecha.anio==2021 && listaEstadias[i].fecha.mes==11 && listaEstadias[i].fecha.dia>15)) {
-				cantVerificada++;
+	for (i=0;i<maxDuen;i++) {
+		if (listaDuenio[i].cantEstadias>0) {
+			for (j=0;j<maxEstad;j++) {
+				if (listaEstadias[j].estaVacio==OCUPADO) {
+					if (listaDuenio[i].id==listaEstadias[j].idDuenio) {
+						if ((strcmp(listaDuenio[i].nombre,"Lucia")==0) || strcmp(listaDuenio[i].nombre,"lucia")==0) {
+							if (listaEstadias[j].fecha.dia>15 && listaEstadias[j].fecha.mes==11 && listaEstadias[j].fecha.anio==2021) {
+								cantVerificada++;
+								break;
+							}
+						}
+					}
+				}
 			}
 		}
 	}

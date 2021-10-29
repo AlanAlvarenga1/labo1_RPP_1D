@@ -60,7 +60,7 @@ int main(void) {
 					}
 				}
 				else {
-					printf ("ERROR. Es necesario registrar al menos a un perro.\n\n");
+					printf ("\n\nERROR. Es necesario registrar al menos a un perro.\n\n");
 				}
 				systemPause("Presione ENTER para continuar");
 				break;
@@ -69,7 +69,7 @@ int main(void) {
 					modificarReserva (datosGuarderia, perrosGuarderia,dueniosPerros,maxEstadias,maxDuenios,maxPerros);
 				}
 				else {
-					printf("ERROR. No hay ninguna estadia registrada. Utilice el primer paso primero\n\n");
+					printf("\n\nERROR. No hay ninguna estadia registrada. Utilice el primer paso primero\n\n");
 				}
 				systemPause("Presione ENTER para continuar");
 				break;
@@ -79,11 +79,11 @@ int main(void) {
 						cantEstadias--;
 					}
 					else {
-						printf ("ERROR. No se ha podido realizar la baja de la estadia. Intente nuevamente\n\n");
+						printf ("\n\nERROR. No se ha podido realizar la baja de la estadia. Intente nuevamente\n\n");
 					}
 				}
 				else {
-					printf ("ERROR. No hay ninguna estadia registrada. Utilice el primer paso primero\n\n");
+					printf ("\n\nERROR. No hay ninguna estadia registrada. Utilice el primer paso primero\n\n");
 				}
 				systemPause("Presione ENTER para continuar");
 				break;
@@ -92,7 +92,7 @@ int main(void) {
 					listarEstadias (datosGuarderia,dueniosPerros,perrosGuarderia,maxEstadias);
 				}
 				else {
-					printf("ERROR. No hay ninguna estadia registrada. Utilice el primer paso primero\n\n");
+					printf("\n\nERROR. No hay ninguna estadia registrada. Utilice el primer paso primero\n\n");
 				}
 				systemPause("Presione ENTER para continuar");
 				break;
@@ -101,16 +101,18 @@ int main(void) {
 					listarPerros (perrosGuarderia,maxPerros);
 				}
 				else {
-					printf ("ERROR. No se ha cargado ningun perro. Intente nuevamente luego de cargar uno\n\n");
+					printf ("\n\nERROR. No se ha cargado ningun perro. Intente nuevamente luego de cargar uno\n\n");
 				}
 				systemPause("Presione ENTER para continuar");
 				break;
 			case 6:
 				if (cantPerros>0) {
+					printf ("\n\n------------------------------------------------------------------------------------------------------------------------------\n");
 					printf ("El promedio de edad de los perros cargados es de %.2f años",promedioEdadPerros);
+					printf ("\n------------------------------------------------------------------------------------------------------------------------------\n");
 				}
 				else {
-					printf ("ERROR. No se ha cargado ningun perro. Intente nuevamente luego de cargar uno\n\n");
+					printf ("\n\nERROR. No se ha cargado ningun perro. Intente nuevamente luego de cargar uno\n\n");
 				}
 				systemPause("Presione ENTER para continuar");
 				break;
@@ -120,10 +122,10 @@ int main(void) {
 					printf ("------------------------------------------------------------------------------------------------------------------------------\n");
 					printf ("%-10s %-25s %-25s %-25s %s","ID","Nombre","Raza","Edad","Cantidad de estadias\n");
 					printUnPerro(perrosGuarderia,posicionPerroConMasEstadias);
-					printf ("------------------------------------------------------------------------------------------------------------------------------\n");
+					printf ("\n------------------------------------------------------------------------------------------------------------------------------\n");
 				}
 				else {
-					printf("ERROR. No hay ninguna estadia registrada. Utilice el primer paso primero\n\n");
+					printf("\n\nERROR. No hay ninguna estadia registrada. Utilice el primer paso primero\n\n");
 				}
 				systemPause("Presione ENTER para continuar");
 				break;
@@ -132,7 +134,7 @@ int main(void) {
 					listadoPerrosConEstadias(datosGuarderia,perrosGuarderia,dueniosPerros,maxPerros,maxEstadias);
 				}
 				else {
-					printf("ERROR. No hay ninguna estadia registrada. Utilice el primer paso primero\n\n");
+					printf("\n\nERROR. No hay ninguna estadia registrada. Utilice el primer paso primero\n\n");
 				}
 				systemPause("Presione ENTER para continuar");
 				break;
@@ -149,31 +151,39 @@ int main(void) {
 					cantAlanConMasDeUnaEstadia=chequearEstadiaAlan (dueniosPerros,maxDuenios);
 
 					if (cantAlanConMasDeUnaEstadia!=-1) {
+						printf ("\n\n------------------------------------------------------------------------------------------------------------------------------\n");
 						printf ("La cantidad de personas con el nombre Alan y con mas de una estadia es de %d",cantAlanConMasDeUnaEstadia);
+						printf ("\n------------------------------------------------------------------------------------------------------------------------------\n");
 					}
 					else {
+						printf ("\n\n------------------------------------------------------------------------------------------------------------------------------\n");
 						printf ("No Hay ninguna persona llamada Alan que tenga mas de una estadia registrada");
+						printf ("\n------------------------------------------------------------------------------------------------------------------------------\n\n");
 					}
 				}
 				else {
-					printf("ERROR. No hay ninguna estadia registrada. Utilice el primer paso primero\n\n");
+					printf("\n\nERROR. No hay ninguna estadia registrada. Utilice el primer paso primero\n\n");
 				}
 
 				systemPause("Presione ENTER para continuar");
 				break;
 			case 11:
 				if (cantEstadias>0 && cantDuenios>0) {
-					cantLuciaConEstadiaEnQuincenaNov=checkLuciaConEstadia (datosGuarderia,dueniosPerros, maxEstadias);
+					cantLuciaConEstadiaEnQuincenaNov=checkLuciaConEstadia (datosGuarderia,dueniosPerros, maxEstadias, maxDuenios);
 
 					if (cantLuciaConEstadiaEnQuincenaNov!=-1) {
+						printf ("\n\n------------------------------------------------------------------------------------------------------------------------------\n");
 						printf ("La cantidad de personas con el nombre Lucia y con mas de una estadia en la segunda quincena de noviembre del 2021 es de %d",cantLuciaConEstadiaEnQuincenaNov);
+						printf ("\n------------------------------------------------------------------------------------------------------------------------------\n\n");
 					}
 					else {
-						printf ("No hay ninguna persona de nombre Lucia que tenga una estadia en la segunda quincena de noviembre del 2021");
+						printf ("\n\n------------------------------------------------------------------------------------------------------------------------------\n");
+						printf ("\nNo hay ninguna persona de nombre Lucia que tenga una estadia en la segunda quincena de noviembre del 2021\n\n");
+						printf ("\n------------------------------------------------------------------------------------------------------------------------------\n\n");
 					}
 				}
 				else {
-					printf("ERROR. No hay ninguna estadia registrada. Utilice el primer paso primero\n\n");
+					printf("\nERROR. No hay ninguna estadia registrada. Utilice el primer paso primero\n\n");
 				}
 
 				systemPause("Presione ENTER para continuar");

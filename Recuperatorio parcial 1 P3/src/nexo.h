@@ -93,6 +93,6 @@ void printUnaEstadia (sEstadiaDiaria* listaEstadia,sDuenio* listaDuenio,sPerro* 
  */
 void listarEstadias(sEstadiaDiaria* lista,sDuenio* listaDuenio,sPerro* listaPerro, int max);
 
-int checkLuciaConEstadia (sEstadiaDiaria* listaEstadias,sDuenio* listaDuenio, int maxEstad);
+int checkLuciaConEstadia (sEstadiaDiaria* listaEstadias,sDuenio* listaDuenio, int maxEstad, int maxDuen);
 
 #endif /* NEXO_H_ */
