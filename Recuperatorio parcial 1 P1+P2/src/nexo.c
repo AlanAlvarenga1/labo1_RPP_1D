@@ -191,6 +191,8 @@ void modificarReserva (sEstadiaDiaria* registroEstadia, sPerro* listaPerro, sDue
 				if (i!=-1) {
 					confirmacion=1;
 					while (confirmacion==1) {
+						listarPerros(listaPerro,lenPerros);
+
 						nuevoPerro=buscarPerroID(listaPerro,tomarInt("Ingresa el ID del perro que deseas registrar: ","ERROR. Has ingresado un ID invalido. Intenta nuevamente: ",7000,7500), maxPerros);
 
 						while (nuevoPerro==posicionPerro) {
