@@ -60,7 +60,9 @@ int main(void) {
 					}
 				}
 				else {
-					printf ("\n\nERROR. Es necesario registrar al menos a un perro.\n\n");
+					printf ("\n\n------------------------------------------------------------------------------------------------------------------------------\n");
+					printf ("ERROR. Es necesario registrar al menos a un perro.");
+					printf ("\n------------------------------------------------------------------------------------------------------------------------------\n\n");
 				}
 				systemPause("Presione ENTER para continuar");
 				break;
@@ -69,7 +71,9 @@ int main(void) {
 					modificarReserva (datosGuarderia, perrosGuarderia,dueniosPerros,maxEstadias,maxDuenios,maxPerros);
 				}
 				else {
-					printf("\n\nERROR. No hay ninguna estadia registrada. Utilice el primer paso primero\n\n");
+					printf ("\n\n------------------------------------------------------------------------------------------------------------------------------\n");
+					printf("ERROR. No hay ninguna estadia registrada. Utilice el primer paso primero");
+					printf ("\n------------------------------------------------------------------------------------------------------------------------------\n\n");
 				}
 				systemPause("Presione ENTER para continuar");
 				break;
@@ -79,11 +83,15 @@ int main(void) {
 						cantEstadias--;
 					}
 					else {
-						printf ("\n\nERROR. No se ha podido realizar la baja de la estadia. Intente nuevamente\n\n");
+						printf ("\n\n------------------------------------------------------------------------------------------------------------------------------\n");
+						printf ("ERROR. No se ha podido realizar la baja de la estadia. Intente nuevamente");
+						printf ("\n------------------------------------------------------------------------------------------------------------------------------\n\n");
 					}
 				}
 				else {
-					printf ("\n\nERROR. No hay ninguna estadia registrada. Utilice el primer paso primero\n\n");
+					printf ("\n\n------------------------------------------------------------------------------------------------------------------------------\n");
+					printf ("ERROR. No hay ninguna estadia registrada. Utilice el primer paso primero");
+					printf ("\n------------------------------------------------------------------------------------------------------------------------------\n\n");
 				}
 				systemPause("Presione ENTER para continuar");
 				break;
@@ -92,7 +100,9 @@ int main(void) {
 					listarEstadias (datosGuarderia,dueniosPerros,perrosGuarderia,maxEstadias);
 				}
 				else {
-					printf("\n\nERROR. No hay ninguna estadia registrada. Utilice el primer paso primero\n\n");
+					printf ("\n\n------------------------------------------------------------------------------------------------------------------------------\n");
+					printf("ERROR. No hay ninguna estadia registrada. Utilice el primer paso primero");
+					printf ("\n------------------------------------------------------------------------------------------------------------------------------\n\n");
 				}
 				systemPause("Presione ENTER para continuar");
 				break;
@@ -101,7 +111,9 @@ int main(void) {
 					listarPerros (perrosGuarderia,maxPerros);
 				}
 				else {
-					printf ("\n\nERROR. No se ha cargado ningun perro. Intente nuevamente luego de cargar uno\n\n");
+					printf ("\n\n------------------------------------------------------------------------------------------------------------------------------\n");
+					printf ("ERROR. No se ha cargado ningun perro. Intente nuevamente luego de cargar uno");
+					printf ("\n------------------------------------------------------------------------------------------------------------------------------\n\n");
 				}
 				systemPause("Presione ENTER para continuar");
 				break;
@@ -112,7 +124,9 @@ int main(void) {
 					printf ("\n------------------------------------------------------------------------------------------------------------------------------\n");
 				}
 				else {
-					printf ("\n\nERROR. No se ha cargado ningun perro. Intente nuevamente luego de cargar uno\n\n");
+					printf ("\n\n------------------------------------------------------------------------------------------------------------------------------\n");
+					printf ("ERROR. No se ha cargado ningun perro. Intente nuevamente luego de cargar uno");
+					printf ("\n------------------------------------------------------------------------------------------------------------------------------\n\n");
 				}
 				systemPause("Presione ENTER para continuar");
 				break;
@@ -125,7 +139,9 @@ int main(void) {
 					printf ("\n------------------------------------------------------------------------------------------------------------------------------\n");
 				}
 				else {
-					printf("\n\nERROR. No hay ninguna estadia registrada. Utilice el primer paso primero\n\n");
+					printf ("\n\n------------------------------------------------------------------------------------------------------------------------------\n");
+					printf("ERROR. No hay ninguna estadia registrada. Utilice el primer paso primero");
+					printf ("\n------------------------------------------------------------------------------------------------------------------------------\n\n");
 				}
 				systemPause("Presione ENTER para continuar");
 				break;
@@ -134,7 +150,9 @@ int main(void) {
 					listadoPerrosConEstadias(datosGuarderia,perrosGuarderia,dueniosPerros,maxPerros,maxEstadias);
 				}
 				else {
-					printf("\n\nERROR. No hay ninguna estadia registrada. Utilice el primer paso primero\n\n");
+					printf ("\n\n------------------------------------------------------------------------------------------------------------------------------\n");
+					printf("ERROR. No hay ninguna estadia registrada. Utilice el primer paso primero");
+					printf ("\n------------------------------------------------------------------------------------------------------------------------------\n\n");
 				}
 				systemPause("Presione ENTER para continuar");
 				break;
@@ -162,7 +180,9 @@ int main(void) {
 					}
 				}
 				else {
-					printf("\n\nERROR. No hay ninguna estadia registrada. Utilice el primer paso primero\n\n");
+					printf ("\n\n------------------------------------------------------------------------------------------------------------------------------\n");
+					printf("ERROR. No hay ninguna estadia registrada. Utilice el primer paso primero");
+					printf ("\n------------------------------------------------------------------------------------------------------------------------------\n\n");
 				}
 
 				systemPause("Presione ENTER para continuar");
@@ -177,20 +197,22 @@ int main(void) {
 						printf ("\n------------------------------------------------------------------------------------------------------------------------------\n\n");
 					}
 					else {
-						printf ("\n\n------------------------------------------------------------------------------------------------------------------------------\n");
-						printf ("\nNo hay ninguna persona de nombre Lucia que tenga una estadia en la segunda quincena de noviembre del 2021\n\n");
+						printf ("\n\n------------------------------------------------------------------------------------------------------------------------------");
+						printf ("\nNo hay ninguna persona de nombre Lucia que tenga una estadia en la segunda quincena de noviembre del 2021");
 						printf ("\n------------------------------------------------------------------------------------------------------------------------------\n\n");
 					}
 				}
 				else {
-					printf("\nERROR. No hay ninguna estadia registrada. Utilice el primer paso primero\n\n");
+					printf ("\n\n------------------------------------------------------------------------------------------------------------------------------\n");
+					printf("ERROR. No hay ninguna estadia registrada. Utilice el primer paso primero");
+					printf ("\n------------------------------------------------------------------------------------------------------------------------------\n\n");
 				}
 
 				systemPause("Presione ENTER para continuar");
 				break;
 
 			case 12:
-				printf ("Gracias por usar este programa!!!");
+				printf ("\n\nGracias por usar este programa!!!");
 		}
 	}
 }
